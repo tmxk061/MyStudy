@@ -1,0 +1,12 @@
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\bin\Debug\1016_Cs_TCP_IP_client.exe.config
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\bin\Debug\1016_Cs_TCP_IP_client.exe
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\bin\Debug\1016_Cs_TCP_IP_client.pdb
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\1016_Cs_TCP_IP_client.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\_1016_Cs_TCP_IP_client.Form1.resources
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\_1016_Cs_TCP_IP_client.Properties.Resources.resources
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\1016_Cs_TCP_IP_client.csproj.GenerateResource.cache
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\1016_Cs_TCP_IP_client.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\1016_Cs_TCP_IP_client.exe
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\1016_Cs_TCP_IP_client.pdb
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\_1016_Cs_TCP_IP_client.Form2.resources
+C:\Users\USER\Desktop\비트고급석궈니\1016_Cs_TCP_IP_client\1016_Cs_TCP_IP_client\obj\Debug\_1016_Cs_TCP_IP_client.NewMemberForm.resources
