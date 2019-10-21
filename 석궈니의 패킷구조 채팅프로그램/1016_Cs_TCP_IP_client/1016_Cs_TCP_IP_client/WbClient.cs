@@ -113,47 +113,7 @@ namespace _1016_Cs_TCP_IP_client
             {
                 Console.WriteLine(ex.Message);
             }
-        } //최종 전달
-
-        //private void ReceiveData(ref byte[] data)
-        //{
-        //    try
-        //    {
-        //        int total = 0;
-        //        int size = 0;
-        //        int left_data = 0;
-        //        int recv_data = 0;
-
-        //        // 수신할 데이터 크기 알아내기 
-        //        byte[] data_size = new byte[4];
-        //        recv_data = this.server.Receive(data_size, 0, 4, SocketFlags.None);
-        //        size = BitConverter.ToInt32(data_size, 0);
-        //        left_data = size;
-
-        //        data = new byte[size];
-
-        //        // 실제 데이터 수신
-        //        while (total < size)
-        //        {
-        //            recv_data = this.server.Receive(data, total, left_data, 0);
-        //            if (recv_data == 0) break;
-        //            total += recv_data;
-        //            left_data -= recv_data;
-        //        }
-
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return;
-        //    }
-        //} 
-        //public void Send(string name, string msg)
-        //{
-        //    string tmp = string.Format("[{0}] {1}", name, msg);
-        //    byte[] data = Encoding.Default.GetBytes(tmp);
-        //    SendData(data);
-        //    //server.Send(data, data.Length, SocketFlags.None); // 문자열 전송
-        //} //채팅기능용
+        } 
 
         public void ReceiveData(ref byte[] rcvdata)
         {

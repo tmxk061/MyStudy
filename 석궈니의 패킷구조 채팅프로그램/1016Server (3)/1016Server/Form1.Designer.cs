@@ -46,11 +46,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.파일FToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1107, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1265, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,32 +64,32 @@
             this.toolStripMenuItem1,
             this.프로그램종료XToolStripMenuItem});
             this.파일FToolStripMenuItem.Name = "파일FToolStripMenuItem";
-            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.파일FToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.파일FToolStripMenuItem.Text = "파일(&F)";
             // 
             // 서버연결CToolStripMenuItem
             // 
             this.서버연결CToolStripMenuItem.Name = "서버연결CToolStripMenuItem";
-            this.서버연결CToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.서버연결CToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.서버연결CToolStripMenuItem.Text = "서버실행(&R)";
             this.서버연결CToolStripMenuItem.Click += new System.EventHandler(this.서버연결CToolStripMenuItem_Click);
             // 
             // 서버연결해제DToolStripMenuItem
             // 
             this.서버연결해제DToolStripMenuItem.Name = "서버연결해제DToolStripMenuItem";
-            this.서버연결해제DToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.서버연결해제DToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.서버연결해제DToolStripMenuItem.Text = "서버종료(&N)";
             this.서버연결해제DToolStripMenuItem.Click += new System.EventHandler(this.서버연결해제DToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(158, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(190, 6);
             // 
             // 프로그램종료XToolStripMenuItem
             // 
             this.프로그램종료XToolStripMenuItem.Name = "프로그램종료XToolStripMenuItem";
-            this.프로그램종료XToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.프로그램종료XToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.프로그램종료XToolStripMenuItem.Text = "프로그램종료(&X)";
             this.프로그램종료XToolStripMenuItem.Click += new System.EventHandler(this.프로그램종료XToolStripMenuItem_Click);
             // 
@@ -100,7 +102,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 20);
+            this.label1.Size = new System.Drawing.Size(152, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "서버 정지...";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -110,9 +112,10 @@
             this.panel1.BackColor = System.Drawing.Color.Red;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1107, 37);
+            this.panel1.Size = new System.Drawing.Size(1265, 46);
             this.panel1.TabIndex = 2;
             // 
             // listBox1
@@ -120,18 +123,20 @@
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.listBox1.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(0, 61);
+            this.listBox1.ItemHeight = 25;
+            this.listBox1.Location = new System.Drawing.Point(0, 74);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(432, 316);
+            this.listBox1.Size = new System.Drawing.Size(493, 397);
             this.listBox1.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(432, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(493, 74);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 316);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 397);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -140,23 +145,25 @@
             this.listBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox2.Font = new System.Drawing.Font("굴림", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Location = new System.Drawing.Point(473, 61);
+            this.listBox2.ItemHeight = 25;
+            this.listBox2.Location = new System.Drawing.Point(540, 74);
+            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(634, 316);
+            this.listBox2.Size = new System.Drawing.Size(725, 397);
             this.listBox2.TabIndex = 5;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 377);
+            this.ClientSize = new System.Drawing.Size(1265, 471);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);

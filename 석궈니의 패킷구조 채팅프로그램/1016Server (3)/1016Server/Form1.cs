@@ -78,7 +78,6 @@ namespace _1016Server
         }
         #endregion
         
-
         #region 수신패킷 분석 및 처리
         public void PaserByteData(Socket sock, byte[] data)
         {
@@ -189,7 +188,6 @@ namespace _1016Server
 
             server.SendAll(sock, ackmessage);
         }
-
         #endregion
     }
 }
