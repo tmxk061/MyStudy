@@ -75,8 +75,9 @@ namespace _1002_shop_program
         private void button1_Click(object sender, EventArgs e)
         {
             searchNum++;
+            int num = searchNum * display;
             textBox2.Text = searchNum.ToString();
-            bd.SearchBuy(textBox1.Text, comboBox2.Text, searchNum.ToString(), display.ToString());
+            bd.SearchBuy(textBox1.Text, comboBox2.Text, num.ToString(), display.ToString());
             PlintSearchList();
         }
 
@@ -156,10 +157,55 @@ namespace _1002_shop_program
             lo.ShowDialog();
         }
 
-        Loading lo = new Loading();
+        //브라우저 검색
+        public void GoBrowser(string link)
+        {
+            tabControl1.SelectedTab = tabControl1.TabPages[1];
+            webBrowser1.Navigate(link);    //통합검색
+        }
 
-        
-      
+        //검색 문자열 출력
+        public void PrintSearchTxt(string Title)
+        {
+            string searchword = string.Empty;
+            searchword += Title;
+            for (int i = 0; i < listBox2.Items.Count; i++)
+            {
+                searchword += listBox2.Items[i];
+            }
+
+            textBox4.Text = searchword;
+        }
+        //장바구니 데이터 개별 선택
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex < 0)
+                return;
+
+            tabControl1.SelectedTab = tabControl1.TabPages[2];
+
+            panel3.Controls.Clear();
+
+            int idx = listBox1.SelectedIndex;
+
+            string filepath = buylist[idx].Image;
+            byte[] data = new System.Net.WebClient().DownloadData(filepath);
+            System.IO.MemoryStream ms = new System.IO.MemoryStream(data);
+            Image img = Image.FromStream(ms);
+
+            shopingItem item =
+                        new shopingItem(img, buylist[idx].Title,
+                                        buylist[idx].Lprice.ToString(),
+                                        buylist[idx].Link.ToString(),
+                                        this);
+            this.Invoke(new MethodInvoker(
+                         delegate ()
+                         {
+                             panel3.Controls.Add(item);
+                         }
+                     ));
+        }
+
         #endregion
 
         #region 정보출력
@@ -238,10 +284,10 @@ namespace _1002_shop_program
         //장바구니 탭 누르면 장바구니 데이터 출력
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab != tabControl1.TabPages[2])
-                return;
+            //if (tabControl1.SelectedTab != tabControl1.TabPages[2])
+            //    return;
 
-            PrintBuyData();
+            //PrintBuyData();
 
         }
 
@@ -311,29 +357,15 @@ namespace _1002_shop_program
         //장바구니 데이터 단일출력
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //tabControl1.SelectedTab = tabControl1.TabPages[2];
+          
 
-            //panel3.Controls.Clear();
+        }
 
-            //int idx = listBox1.SelectedIndex;
-
-            //string filepath = buylist[idx].Image;
-            //byte[] data = new System.Net.WebClient().DownloadData(filepath);
-            //System.IO.MemoryStream ms = new System.IO.MemoryStream(data);
-            //Image img = Image.FromStream(ms);
-
-            //shopingItem item =
-            //            new shopingItem(img, buylist[idx].Title,
-            //                            buylist[idx].Lprice.ToString(),
-            //                            buylist[idx].Link.ToString(),
-            //                            this);
-            //this.Invoke(new MethodInvoker(
-            //             delegate ()
-            //             {
-            //                 panel3.Controls.Add(item);
-            //             }
-            //         ));
-
+        //장바구니 전체출력
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.TabPages[2];
+            PrintBuyData();
         }
         #endregion
 
@@ -480,7 +512,6 @@ namespace _1002_shop_program
 
         private void exelSave(string filename)
         {
-            lo.ShowDialog();
             Application app = new Application();
             Workbook workbook = app.Workbooks.Add();
             //workbook.SaveAs(Filename: @"C:\Users\USER\Desktop\이것저것\MyShoping.xlsx");
@@ -517,8 +548,6 @@ namespace _1002_shop_program
             workbook.Save();
             //workbook.SaveAs(Filename: @"C:\Users\USER\Desktop\이것저것\test2.xlsx");
             workbook.Close();
-
-
 
         }
         #endregion
@@ -657,51 +686,10 @@ namespace _1002_shop_program
         #endregion
 
 
-        public void GoBrowser(string link)
-        {
-            tabControl1.SelectedTab = tabControl1.TabPages[1];
-            webBrowser1.Navigate(link);    //통합검색
-        }
+        
+      
+       
 
-        public void PrintSearchTxt(string Title)
-        {
-            string searchword = string.Empty;
-            searchword += Title;
-            for (int i = 0; i < listBox2.Items.Count; i++)
-            {
-                searchword += listBox2.Items[i];
-            }
-
-            textBox4.Text = searchword;
-        }
-
-        private void listBox1_DoubleClick(object sender, EventArgs e)
-        {
-            if (listBox1.SelectedIndex < 0)
-                return;
-
-            tabControl1.SelectedTab = tabControl1.TabPages[2];
-
-            panel3.Controls.Clear();
-
-            int idx = listBox1.SelectedIndex;
-
-            string filepath = buylist[idx].Image;
-            byte[] data = new System.Net.WebClient().DownloadData(filepath);
-            System.IO.MemoryStream ms = new System.IO.MemoryStream(data);
-            Image img = Image.FromStream(ms);
-
-            shopingItem item =
-                        new shopingItem(img, buylist[idx].Title,
-                                        buylist[idx].Lprice.ToString(),
-                                        buylist[idx].Link.ToString(),
-                                        this);
-            this.Invoke(new MethodInvoker(
-                         delegate ()
-                         {
-                             panel3.Controls.Add(item);
-                         }
-                     ));
-        }
+       
     }
 }
