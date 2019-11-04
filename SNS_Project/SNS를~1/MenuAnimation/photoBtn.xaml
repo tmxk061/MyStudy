@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="MenuAnimation.photoBtn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MenuAnimation"
+             mc:Ignorable="d" 
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             d:DesignHeight="175.274" d:DesignWidth="243.654">
+    <Grid>
+        <Button Name="mypicture" Height="175" Width="244" Click="Mypicture_Click">
+        </Button>
+        <Canvas>
+           
+            <Button Canvas.Right="7" Canvas.Bottom="8" Height="18" Width="18" Click="Button_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/delete.png" />
+                </Button.Background>
+            </Button>
+            <Button Canvas.Right="30" Canvas.Bottom="8" Height="18" Width="18">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Assets/heart.png" />
+                </Button.Background>
+            </Button>
+        </Canvas>
+        
+    </Grid>
+    
+</UserControl>

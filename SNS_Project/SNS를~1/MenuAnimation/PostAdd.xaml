@@ -1,0 +1,39 @@
+﻿<Window x:Class="MenuAnimation.PostAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MenuAnimation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="320.8" Width="506.4" WindowStyle="None" ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen"  AllowsTransparency="True">
+    <Window.Background>
+        <SolidColorBrush Color="Black" Opacity="0.7"/>
+    </Window.Background>
+    <Grid Margin="0,0,10.2,9.6">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Grid.Row="0" Background="White" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFlatButton}" Click="CloseButton_Click" Margin="0,0,30,0">
+            <materialDesign:PackIcon Kind="Close" Foreground="Black" />
+        </Button>
+        <Button Name="uploadbtn" Grid.Row="1" Height="Auto" Margin="182,31.4,187.8,19.6" Background="White" Click="Button_Click" >
+            <materialDesign:PackIcon Kind="Upload" Foreground="Black" Width="70" Height="70"/>
+        </Button>
+        <Grid Grid.Row="2">
+            <TextBox Name="posttext"  Text="문구 입력" Margin="30,17,30,46.2">
+                <TextBox.Background>
+                    <SolidColorBrush Color="White" Opacity="0.5"/>
+                </TextBox.Background>
+            </TextBox>
+            <Button  Style="{StaticResource MaterialDesignFlatButton}" Content="등록" Height="Auto" Margin="388,90,30,10.2" Background="#FFF8F8F9" Foreground="Black" RenderTransformOrigin="-1.519,0.174" Click="Button_Click_1" >
+
+            </Button>
+        </Grid>
+
+    </Grid>
+
+</Window>
